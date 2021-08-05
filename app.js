@@ -22,7 +22,7 @@ const adminRouter = require('./routes/admin');
 
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 
 // Сообщаем express, что в качестве шаблонизатора используется "hbs".

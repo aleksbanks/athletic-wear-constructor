@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { Order } = require('../db/models')
 const { sessionChecker } = require('../middleware/commonMiddleware');
 const router = express.Router();
 const chalk = require('chalk');
@@ -19,9 +19,32 @@ router.post('/', (req, res) => {
   }
 });
 
-router.get('/adminpage', sessionChecker, (req, res) => {
-  res.render('./admin/adminpage', { layout: false });
+router.get('/adminpage', sessionChecker, async (req, res) => {
+  const allOrders = await Order.findAll();
+  // console.log(allOrders);
+  res.render('./admin/adminpage', { layout: false, allOrders });
 });
+
+// router.get('/adminpage', (req, res)=>{
+//   res.render('.admin/adminpage')
+// })
+// const responsFormServer = await fetch('/books/find',{
+//   method:'POST',
+//   headers: { // http-заголовки
+//   'Content-Type': 'application/json', // тип контента
+// },
+// body: J
+
+
+
+
+// router.get('/add', async (req, res) => { // ручка добавления поста
+//   const messages = await Text.findAll(); // находим все старые посты чтобы отобразить на странице
+//   res.render('messageForm', { messages }); // рендерим messageForm
+// });
+
+
+
 
 router.get('/adminpage/logout', sessionChecker, (req, res) => {
   req.session.destroy();

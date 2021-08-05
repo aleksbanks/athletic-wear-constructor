@@ -24,21 +24,25 @@
 
 <div style="color: white">
   <span >Заказы</span>
-  <div class='post-container'>
-    {{#each posts}}
-    <article id="{{this.id}}">
-        <form method="post" action='/posts/{{this.id}}/vote' class="inline">
-            <button type="submit" name="submit_param" value="submit_value" class="fa fa-sort-desc vote-button upvote-button"></button>
-        </form>
-        <h2><a href='/posts/{{this.id}}'>{{this.title}}</a></h2>
-        <p>
-            <span class='points'>{{this.votes}}</span>
-            <span class='username'>{{this.username}}</span>
-            <span class='comment-count'>{{ this.commentCount}}</span>
-            <a class="delete" href='/posts/{{this.id}}'></a>
-        </p>
-    </article>
+  <div class="">
+    <table>
+    <tr>
+    <th>Номер заказа</th>
+    <th>Сумма заказа</th>
+    <th>Лготип</th>
+    <th>Дата заказа</th>
+   </tr>
+   
+    
+    {{#each allOrders}}
+    <tr>
+      <td>{{this.id}}</td>
+      <td>{{this.price}}</td>        
+      <td><img src="{{this.logo}}" alt="Logo"></td>
+      <td>{{this.createdAt}}</td>
+    </tr>  
     {{/each}}
+    </table>
 </div>
 </div>
 
