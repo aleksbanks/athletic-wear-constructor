@@ -1,0 +1,51 @@
+<div class="modal-content">
+  <div class="dostavka">
+    <div class="type-toggle nav nav-tabs nav-fill" id="nav-tab dostavka" role="tablist">
+      <a class="type-icon active" id="nav-courier-tab" data-toggle="tab" href="#courier" role="tab"
+        aria-controls="nav-home" aria-selected="true">Курьерская доставка</a>
+      <a class="type-icon" id="nav-boxberry-tab" data-toggle="tab" href="#boxberry" role="tab"
+        aria-controls="nav-profile" aria-selected="false">Доставка Boxberry</a>
+      <a class="type-icon" id="nav-sdek-tab" data-toggle="tab" href="#sdek" role="tab" aria-controls="nav-profile"
+        aria-selected="false">СДЭК</a>
+    </div>
+
+    <div class="tab-content ">
+      <div class="tab-pane fade show active" id="courier" role="tabpanel" aria-labelledby="nav-courier-tab">
+        <div class="">
+          <h4>Курьерская доставка</h4>
+          <p>Максимальный размер 150см по сумме трех измерений, до 10 кг</p>
+          <p>Возможна оплата наличными при получении (только в Санкт-Петербурге и Москве).</p>
+          <p>Срок доставки от 1-3 рабочих дня.</p>
+          <p>В пределах МКАД и КАД — 400 руб.</p>
+          <p>До 100 км за МКАД — 500 руб.</p>
+          <p>До 100 км за КАД — от 600 руб. (уточняйте у менеджера)</p>
+          <p>При заказе от 7000 рублей доставка по Санкт-Петербургу и Москве – 1 руб. *При отказе от покупки без
+            объективных причин (передумали, не можете оплатить, не подошел размер) взымается компенсация курьеру за
+            "холостую поездку" - 500 руб.</p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="boxberry" role="tabpanel" aria-labelledby="nav-boxberry-tab">
+        <div class="">
+          <h4>Доставка Boxberry</h4>
+          <p>Максимальный размер 120 х 80 х 50 см По предварительной оплате</p>
+          <p>Расчитать стоимость на <a href="https://boxberry.ru/calculate_the_cost_of_sending/" target="_blank">сайте
+              Boxberry</a></p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sdek" role="tabpanel" aria-labelledby="nav-sdek-tab">
+        <div class="">
+          <h4>Доставка СДЭК</h4>
+          <p>Вес посылки можно расчитать исходя из следующих данных: 15 комплектов формы весят 5кг.</p>
+          <div class="cdek-wrap">
+            <iframe id="cdek-calc" style="float:left;"
+              src="https://cdek-online.ru/construct_form.php?city_from=137&amp;lenght=20&amp;width=35&amp;height=20&amp;sender_status=other&amp;method_from=1&amp;extra=150"
+              scrolling="no" frameborder="0" height="370px" width="99%"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    <button type="button" class="btn btn-green" data-dismiss="modal">Закрыть</button>
+  </p>
+</div>

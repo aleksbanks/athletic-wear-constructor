@@ -6,6 +6,16 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
+const tshirtsRouter = require('./routes/tshirts');
+const shortsRouter = require('./routes/shorts');
+const socksRouter = require('./routes/socks');
+const cartRouter = require('./routes/cart');
+const shippingRouter = require('./routes/shipping');
+const contactsRouter = require('./routes/contacts');
+const paymentRouter = require('./routes/payment');
+const checkoutRouter = require('./routes/contacts')
+
+
 // Импортируем созданный в отдельный файлах рутеры.
 
 
@@ -27,6 +37,14 @@ app.use(express.urlencoded({ extended: true }));
 // Подключаем middleware, которое позволяет читать переменные JavaScript, сохранённые в формате JSON в body HTTP-запроса.
 app.use(express.json());
 
+app.use('/tshirts', tshirtsRouter);
+app.use('/shorts', shortsRouter);
+app.use('/socks', socksRouter);
+app.use('/cart', cartRouter);
+app.use('/shipping', shippingRouter);
+app.use('/contacts', contactsRouter);
+app.use('/payment', paymentRouter);
+app.use('/checkout', checkoutRouter)
 
 app.use(cookieParser());
 app.use(session({
