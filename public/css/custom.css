@@ -308,11 +308,11 @@ main .type-toggle .type-icon i.fas {
 .wrap {
   display: block;
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .wrap {
     display: flex;
   }
-}
+} */
 .item-info {
   align-self: flex-start;
 }
@@ -786,7 +786,7 @@ main .tab-content > .active {
   overflow: visible;
   transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
   transform: scale(0.9);
-  opacity: 0;
+  opacity: 1;
 }
 
 .modal-content--active {

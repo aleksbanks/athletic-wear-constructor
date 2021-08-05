@@ -13,8 +13,23 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-     logo: {
-        type: Sequelize.STRING
+      logo: {
+        type: Sequelize.TEXT
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      phone: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      comment: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
