@@ -13,6 +13,7 @@ const cartRouter = require('./routes/cart');
 const shippingRouter = require('./routes/shipping');
 const contactsRouter = require('./routes/contacts');
 const paymentRouter = require('./routes/payment');
+const checkoutRouter = require('./routes/contacts')
 
 
 // Импортируем созданный в отдельный файлах рутеры.
@@ -43,6 +44,7 @@ app.use('/cart', cartRouter);
 app.use('/shipping', shippingRouter);
 app.use('/contacts', contactsRouter);
 app.use('/payment', paymentRouter);
+app.use('/checkout', checkoutRouter)
 
 app.use(cookieParser());
 app.use(session({
