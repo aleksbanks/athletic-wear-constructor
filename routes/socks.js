@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('socks')
+  const socks = {};
+  res.render('socks', { socks })
 })
 
 module.exports = router

@@ -1,1 +1,19 @@
 Hello
+<div class="order-wrapper d-flex">
+
+  {{#if tshirt}}
+  {{> tshirt}}
+  {{/if}}
+
+  {{#if shorts}}
+  {{> shorts}}
+  {{/if}}
+
+  {{#if socks}}
+  {{> socks}}
+  {{/if}}
+
+  {{#if cart}}
+  {{> cart}}
+  {{/if}}
+</div>

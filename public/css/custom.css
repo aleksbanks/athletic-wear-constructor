@@ -1,3 +1,4 @@
+
 body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -151,9 +152,6 @@ main .type-toggle a.type-icon svg {
   .main-title {
     height: 80vh;
   }
-  main .type-toggle,
-  .main-title {
-  }
   main .type-toggle .type-icon {
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -289,12 +287,6 @@ main .type-toggle .type-icon i.fas {
 .shorts-slider .carousel-control:hover,
 .gaiters-slider .carousel-control:hover {
   color: green;
-}
-.shirts-slider .thumbs-control .carousel-inner,
-.shorts-slider .thumbs-control .carousel-inner,
-.gaiters-slider .thumbs-control .carousel-inner {
-  /* width: 94%; */
-  /* margin-left: 3%; */
 }
 .shorts-slider .thumbs-control .item.active .thumb {
   width: 12.5%;
@@ -504,9 +496,7 @@ main .type-toggle .type-icon i.fas {
   right: 0px;
 }
 
-.svg-img:before,
-#thumbcarousel .thumb > div:before {
-  content: "";
+.svg-img:before, #thumbcarousel .thumb > div:before {
   display: block;
   background-image: url(../img/3d-shadow.png);
   position: absolute;
@@ -655,11 +645,6 @@ main .tab-content > .active {
   background-color: rgba(0, 0, 0, 0);
   background-image: none;
 }
-@media only screen and (min-width: 768px) {
-  #carousel-gaiters .wrap.col-sm-5 {
-    /* padding: 0 60px; */
-  }
-}
 
 /* Order tab */
 .overall {
@@ -714,8 +699,6 @@ main .tab-content > .active {
 .order-wrapper .row {
   width: 100%;
   margin-bottom: 30px;
-}
-.order-wrapper .row .h1 {
 }
 .order-wrapper .row .h5 {
   margin-bottom: 30px;
@@ -1089,7 +1072,6 @@ a.overall-del.clickable:hover {
 }
 .blockColor > span {
   display: inline-block;
-  float: left;
   line-height: 25px;
   font-weight: 300;
 }
@@ -1282,7 +1264,7 @@ a.overall-del.clickable:hover {
   opacity: 1;
 }
 .radio:focus + label:before {
-  /* box-shadow: 0 0 0 3px rgba(255,255,0,.7); */
+  box-shadow: 0 0 0 3px rgba(255,255,0,.7);
 }
 
 @media only screen and (min-width: 480px) {

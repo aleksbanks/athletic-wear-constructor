@@ -5,6 +5,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
+const hbs = require('hbs')
 
 const tshirtsRouter = require('./routes/tshirts');
 const shortsRouter = require('./routes/shorts');
@@ -27,7 +28,8 @@ const PORT = 3000;
 app.set('view engine', 'hbs');
 // Сообщаем express, что шаблона шаблонизаторая (вью) находятся в папке "ПапкаПроекта/views".
 app.set('views', path.join(__dirname, 'views'));
-
+// Подключаем паршелз
+hbs.registerPartials('views');
 // Подключаем middleware morgan с режимом логирования "dev", чтобы для каждого HTTP-запроса на сервер в консоль выводилась информация об этом запросе.
 app.use(logger('dev'));
 // Подключаем middleware, которое сообщает epxress, что в папке "ПапкаПроекта/public" будут находится статические файлы, т.е. файлы доступные для скачивания из других приложений.
@@ -57,7 +59,8 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  const tshirt = {};
+  res.render('index', { tshirt });
 });
 
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос. Это значит, что искомого раздела просто нет на сайте. Для таких ситуаций используется код ошибки 404. Создаём небольшое middleware, которое генерирует соответствующую ошибку.
