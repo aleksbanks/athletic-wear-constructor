@@ -5,31 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="/css/all.css">
-  <link rel="stylesheet" href="/css/typeahead.css">
-  <link rel="stylesheet" href="/css/animate.min.css">
-  <link rel="stylesheet" href="/css/bootstrap.min-calc.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel="stylesheet" href="/css/custom-calc.css">
+  <link rel="stylesheet" href="/css/animate.min.css">
+  {{!--
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/typeahead.css">
+  <link rel="stylesheet" href="/css/bootstrap.min-calc.css">
+  <link rel="stylesheet" href="/css/custom-calc.css"> --}}
   <title>Athletic Wear Constructor</title>
 </head>
 
 <body>
   <header class="contacts">
     <ul>
-      <li><a href="http://id.sportego.ru/#dostavka" data-toggle="modal">Доставка</a></li>
-      <li><a href="http://id.sportego.ru/#oplata" data-toggle="modal">Оплата</a></li>
-      <li><a href="http://id.sportego.ru/#contacts" data-toggle="modal">Контакты</a></li>
+      <li><a href="/#dostavka" data-toggle="modal">Доставка</a></li>
+      <li><a href="#oplata" data-toggle="modal">Оплата</a></li>
+      <li><a href="#contacts" data-toggle="modal">Контакты</a></li>
       <li><a href="https://www.instagram.com/sportego_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
       <li><a href="https://vk.com/sportego" target="_blank"><i class="fab fa-vk"></i></a></li>
     </ul>
   </header>
   <div class="wrapper nav-fill nav nav-tabs wow fadeInLeft animated type-toggle">
-    <a class="type-icon" id="nav-shirts-tab" data-toggle="tab" href="/tshirt"><img src="/img/tshirt.png"
+    <a class="type-icon" id="nav-shirts-tab" data-toggle="tab" href="/"><img src="/img/tshirt.png"
         alt="logo-tshirt"></a>
     <a class="type-icon" id="nav-shorts-tab" data-toggle="tab" href="/shorts"><img src="/img/shorts.png"
         alt="logo-shorts"></a>
@@ -40,11 +38,115 @@
   <div class="container">
 
     <div>
-      {{{body}}}
+      <div class="order-wrapper d-flex">
+        {{{body}}}
+      </div>
+
     </div>
 
   </div>
+  {{!-- модальные окна --}}
+  <div class="modal-content">
+    <div class="contact">
+      <h3 class="text-center">Контакты</h3>
+      <label><b>ООО «Спортэго»</b></label><br>
+      <label><b>Часы работы:</b> Понедельник - Пятница</label><br>
+      <label>c 10:00 до 19:00</label><br>
+      <label><b>Телефон:</b> <a class="roistat-phone-tel roistat-phone" href="tel:+78002221253">8 (800)
+          222-12-53</a></label><br>
+      <label><b>Адрес:</b> 194044, Санкт-Петербург, Большой Сампсониевский проспект, д.28</label><br>
+    </div>
+    <div class="rekvizity">
+      <h3 class="text-center">Реквизиты</h3>
+      <label><b>ООО «Спортэго»</b></label><br>
+      <laberl><b>ИНН</b> 7842502149<br>
+        <laberl><b>КПП</b> 780201001<br>
+          <laberl><b>ОГРН</b> 1137847320434<br>
+            <label><b>Телефон:</b> <a class="roistat-phone-tel roistat-phone" href="tel:+78002221253">8 (800)
+                222-12-53</a></label><br>
+            <label><b>Юридический адрес:</b> 194044, Санкт-Петербург, Большой Сампсониевский проспект, д.28</label><br>
+          </laberl>
+        </laberl>
+      </laberl>
+    </div>
+    <p class="align-self-end">
+      <button type="button" class="btn btn-green" data-dismiss="modal">Закрыть</button>
+    </p>
+  </div>
+  <div class="modal-content">
+    <div class="oplata">
+      <p>Мы предлагаем вам несколько способов оплаты заказа:</p>
+      <ul>
+        <li>По безналичному расчету путем перечисления денежных средств на наш расчетный счет. (ссылка на наши
+          реквизиты).
+        </li>
+        <li>Оплата банковской картой на сайте. При оформлении заказа на сайте, указав корректный e-mail вам придет
+          онлайн
+          счёт, который можно оплатить картой банка.</li>
+      </ul>
+      <p class="small">При оплате заказа банковской картой обработка информации и платежа происходит на авторизационном
+        сервере платежной платформы. Это значит, что ваши конфиденциальные данные (реквизиты карты) не поступают в
+        интернет-магазин. Информация по защищенному каналу связи SSL передается в зашифрованном виде напрямую на
+        авторизационный сервер. Для передачи информации используются специальные технологии безопасности
+        интернет-платежей
+        Verifed by Visa и MasterCard SecureCode. Все операции по вашей карте осуществляются при полном соблюдении
+        требований VISA International и MasterCard Worldwide. </p>
+    </div>
+    <p>
+      <button type="button" class="btn btn-green" data-dismiss="modal">Закрыть</button>
+    </p>
+  </div>
+  <div class="modal-content">
+    <div class="dostavka">
+      <div class="type-toggle nav nav-tabs nav-fill" id="nav-tab dostavka" role="tablist">
+        <a class="type-icon active" id="nav-courier-tab" data-toggle="tab" href="#courier" role="tab"
+          aria-controls="nav-home" aria-selected="true">Курьерская доставка</a>
+        <a class="type-icon" id="nav-boxberry-tab" data-toggle="tab" href="#boxberry" role="tab"
+          aria-controls="nav-profile" aria-selected="false">Доставка Boxberry</a>
+        <a class="type-icon" id="nav-sdek-tab" data-toggle="tab" href="#sdek" role="tab" aria-controls="nav-profile"
+          aria-selected="false">СДЭК</a>
+      </div>
 
+      <div class="tab-content ">
+        <div class="tab-pane fade show active" id="courier" role="tabpanel" aria-labelledby="nav-courier-tab">
+          <div class="">
+            <h4>Курьерская доставка</h4>
+            <p>Максимальный размер 150см по сумме трех измерений, до 10 кг</p>
+            <p>Возможна оплата наличными при получении (только в Санкт-Петербурге и Москве).</p>
+            <p>Срок доставки от 1-3 рабочих дня.</p>
+            <p>В пределах МКАД и КАД — 400 руб.</p>
+            <p>До 100 км за МКАД — 500 руб.</p>
+            <p>До 100 км за КАД — от 600 руб. (уточняйте у менеджера)</p>
+            <p>При заказе от 7000 рублей доставка по Санкт-Петербургу и Москве – 1 руб. *При отказе от покупки без
+              объективных причин (передумали, не можете оплатить, не подошел размер) взымается компенсация курьеру за
+              "холостую поездку" - 500 руб.</p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="boxberry" role="tabpanel" aria-labelledby="nav-boxberry-tab">
+          <div class="">
+            <h4>Доставка Boxberry</h4>
+            <p>Максимальный размер 120 х 80 х 50 см По предварительной оплате</p>
+            <p>Расчитать стоимость на <a href="https://boxberry.ru/calculate_the_cost_of_sending/" target="_blank">сайте
+                Boxberry</a></p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="sdek" role="tabpanel" aria-labelledby="nav-sdek-tab">
+          <div class="">
+            <h4>Доставка СДЭК</h4>
+            <p>Вес посылки можно расчитать исходя из следующих данных: 15 комплектов формы весят 5кг.</p>
+            <div class="cdek-wrap">
+              <iframe id="cdek-calc" style="float:left;"
+                src="https://cdek-online.ru/construct_form.php?city_from=137&amp;lenght=20&amp;width=35&amp;height=20&amp;sender_status=other&amp;method_from=1&amp;extra=150"
+                scrolling="no" frameborder="0" height="370px" width="99%"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      <button type="button" class="btn btn-green" data-dismiss="modal">Закрыть</button>
+    </p>
+  </div>
 
 
 
