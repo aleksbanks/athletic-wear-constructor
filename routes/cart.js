@@ -5,4 +5,8 @@ router.get('/', (req, res) => {
   res.render('cart', { layout:false })
 })
 
+router.post('/', (req, res) => {
+})
+
 module.exports = router
+

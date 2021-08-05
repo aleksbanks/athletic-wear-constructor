@@ -21,6 +21,7 @@
   "homepage": "https://github.com/aleksbanks/athletic-wear-constructor#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.9.3",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.1.0",
     "chalk": "^4.1.2",
