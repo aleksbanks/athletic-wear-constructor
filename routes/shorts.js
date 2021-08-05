@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('shorts')
+  const shorts = {};
+  res.render('shorts', { shorts })
 })
 
 module.exports = router
