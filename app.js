@@ -14,6 +14,7 @@ const shippingRouter = require('./routes/shipping');
 const contactsRouter = require('./routes/contacts');
 const paymentRouter = require('./routes/payment');
 const checkoutRouter = require('./routes/contacts');
+const adminRouter = require('./routes/admin');
 
 
 // Импортируем созданный в отдельный файлах рутеры.
@@ -37,14 +38,6 @@ app.use(express.urlencoded({ extended: true }));
 // Подключаем middleware, которое позволяет читать переменные JavaScript, сохранённые в формате JSON в body HTTP-запроса.
 app.use(express.json());
 
-app.use('/tshirts', tshirtsRouter);
-app.use('/shorts', shortsRouter);
-app.use('/socks', socksRouter);
-app.use('/cart', cartRouter);
-app.use('/shipping', shippingRouter);
-app.use('/contacts', contactsRouter);
-app.use('/payment', paymentRouter);
-app.use('/checkout', checkoutRouter);
 
 app.use(cookieParser());
 app.use(session({
@@ -55,6 +48,16 @@ app.use(session({
   cookie: { secure: false },
   store: new FileStore({}),
 }));
+
+app.use('/tshirts', tshirtsRouter);
+app.use('/shorts', shortsRouter);
+app.use('/socks', socksRouter);
+app.use('/cart', cartRouter);
+app.use('/shipping', shippingRouter);
+app.use('/contacts', contactsRouter);
+app.use('/payment', paymentRouter);
+app.use('/checkout', checkoutRouter);
+app.use('/admin', adminRouter);
 
 app.get('/', (req, res) => {
   res.render('index');
