@@ -22,7 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Order.init({
-    logo: DataTypes.STRING
+    logo: DataTypes.STRING,
+    price: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Order',

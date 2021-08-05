@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/aleksbanks/athletic-wear-constructor#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.1.0",
     "chalk": "^4.1.2",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
