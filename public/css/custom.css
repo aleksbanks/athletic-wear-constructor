@@ -8,7 +8,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(3px) brightness(50%);
- 
 }
 h1,
 h2,
@@ -1197,6 +1196,21 @@ a.overall-del.clickable:hover {
   right: 0;
   bottom: 0;
   margin: 0 30px 30px;
+}
+.wrapper {
+  max-width: 650px;
+  max-height: 90px;
+  background: rgba(255, 234, 13, 0.5);
+  border: solid rgba(255, 234, 13, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(3px) brightness(50%);
+  display: flex;
+  justify-content: space-around;
+}
+.type-icon img {
+  margin: 2px;
+  max-width: 100px;
+  max-height: 80px;
 }
 @media only screen and (max-width: 500px) {
   .btn.setlayout {
