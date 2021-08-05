@@ -9,16 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
       },
-      order_number: {
-        type: Sequelize.INTEGER
+      price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
-      category: {
-        type: Sequelize.STRING
-      },
-      size: {
-        type: Sequelize.STRING
-      },
-      logo: {
+     logo: {
         type: Sequelize.STRING
       },
       createdAt: {
