@@ -1,4 +1,3 @@
-
 body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -8,8 +7,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* filter: blur(2px); */
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(3px) brightness(50%);
+ 
 }
 h1,
 h2,
@@ -496,7 +495,8 @@ main .type-toggle .type-icon i.fas {
   right: 0px;
 }
 
-.svg-img:before, #thumbcarousel .thumb > div:before {
+.svg-img:before,
+#thumbcarousel .thumb > div:before {
   display: block;
   background-image: url(../img/3d-shadow.png);
   position: absolute;
@@ -1264,7 +1264,7 @@ a.overall-del.clickable:hover {
   opacity: 1;
 }
 .radio:focus + label:before {
-  box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
 }
 
 @media only screen and (min-width: 480px) {
