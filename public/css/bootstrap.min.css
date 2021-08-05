@@ -67,7 +67,8 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #212529;
-	text-align: left
+	text-align: left;
+  
 }
 
 [tabindex="-1"]:focus {
@@ -4290,10 +4291,6 @@ input[type=submit].btn-block {
 	cursor: default
 }
 
-.nav-tabs {
-	border-bottom: 1px solid #dee2e6
-}
-
 .nav-tabs .nav-item {
 	margin-bottom: -1px
 }
@@ -4304,10 +4301,6 @@ input[type=submit].btn-block {
 	border-top-right-radius: .25rem
 }
 
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-	border-color: #e9ecef #e9ecef #dee2e6
-}
 
 .nav-tabs .nav-link.disabled {
 	color: #6c757d;
