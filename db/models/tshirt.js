@@ -25,10 +25,10 @@ module.exports = (sequelize, DataTypes) => {
     sleeves: DataTypes.STRING,
     disign_id: DataTypes.INTEGER,
     logo_position: DataTypes.INTEGER,
-    player_number: DataTypes.INTEGER,
-    last_name: DataTypes.STRING,
     size: DataTypes.STRING,
     order_id: DataTypes.INTEGER,
+    player_number: DataTypes.INTEGER,
+    last_name: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Tshirt',

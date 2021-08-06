@@ -5,7 +5,25 @@
   margin: 0;
   padding: 0;
 }
-
+.tbButton{
+  color: white;
+}
+.tableLogo {
+}
+tr {
+  text-align: center;
+  border: 1px solid grey;
+}
+th{
+  border: 1px solid grey;
+}
+td {
+  text-align: left;
+  border: 1px solid grey;
+}
+.logo {
+  width: 50px;
+}
 html {
   background-color: #23203b;
   -webkit-background-size: cover;
@@ -18,7 +36,9 @@ body {
   background: transparent;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -76,7 +96,7 @@ body, input, button {
 }
 .login form button {
   margin-top: 20px;
-  background: #27AE60;
+  background: #27ae60;
   border: none;
   font-size: 1.6em;
   font-weight: 300;
@@ -103,7 +123,9 @@ body, input, button {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
-.float:hover, .float:focus, .float:active {
+.float:hover,
+.float:focus,
+.float:active {
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
 }
