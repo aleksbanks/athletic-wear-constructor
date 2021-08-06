@@ -14,6 +14,12 @@ module.exports = {
       secondary_color: {
         type: Sequelize.STRING
       },
+      details_color:{
+        type: Sequelize.STRING
+      },
+      secondary_details_color:{
+        type: Sequelize.STRING
+      },
       collar: {
         type: Sequelize.STRING
       },

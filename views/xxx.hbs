@@ -1,0 +1,65 @@
+<h2>Футболка</h2>
+<table>
+  <tr>
+    <th>Цвет</th>
+    <th>Второй цвет</th>
+    <th>Цвет элеметов</th>
+    <th>Второй цвет элеметов</th>
+    <th>Воротник</th>
+    <th>Рукова</th>
+    <th>Дизайн</th>
+    <th>Позиция логотипа</th>
+    <th>Размер</th>
+    <th>Номер игрока</th>
+    <th>Фамилия игрока</th>
+  </tr>
+    {{#each allTshirt}}
+  <tr>
+      <td>{{this.color}}</td>
+      <td>{{this.secondary_color}}</td>
+      <td>{{this.details_color}}</td>
+      <td>{{this.secondary_details_color}}</td>
+      <td>{{this.collar}}</td>
+      <td>{{this.sleeves}}</td>
+      <td>{{this.disign_id}}</td>
+      <td>{{this.logo_position}}</td>
+      <td>{{this.size}}</td>
+      <td>{{this.player_number}}</td>
+      <td>{{this.last_name}}</td>
+  </tr>
+    {{/each}}
+</table>
+
+
+<h2>Шорты</h2>
+<table>
+  <tr>
+    <th>Цвет</th>
+    <th>Дизайн</th>
+    <th>Размер</th>
+    <th>Позиция логотипа</th>
+  </tr>
+    {{#each allShort}}
+  <tr>
+      <td>{{this.color}}</td>
+      <td>{{this.disign_id}}</td>
+      <td>{{this.size}}</td>
+      <td>{{this.logo_position}}</td>
+  </tr>
+    {{/each}}
+</table>
+
+{{!-- id	color	disign_id	"size"	order_id	logo_position	"createdAt"	"updatedAt" --}}
+<h2>Гетры</h2>
+<table>
+  <tr>
+    <th>Цвет</th>
+    <th>Размер</th>
+  </tr>
+    {{#each allSocks}}
+  <tr>
+      <td>{{this.color}}</td>
+      <td>{{size}}</td>
+  </tr>
+    {{/each}}
+</table>

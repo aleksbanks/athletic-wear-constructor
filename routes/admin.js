@@ -1,5 +1,5 @@
 const express = require('express');
-const { Order } = require('../db/models')
+const { Order, Shorts, Tshirt, Socks } = require('../db/models');
 const { sessionChecker } = require('../middleware/commonMiddleware');
 const router = express.Router();
 const chalk = require('chalk');
@@ -40,6 +40,16 @@ router.get('/adminpage', sessionChecker, async (req, res) => {
   })
   res.render('./admin/adminpage', { layout: false, allOrders });
 });
+
+router.get('/show/:id', async (req, res) => {
+  const { id } = req.params;
+  allSocks = await Socks.findAll({ where: { order_id: id } });
+  allTshirt = await Tshirt.findAll({ where: { order_id: id } });
+  allShort = await Shorts.findAll({ where: { order_id: id } })
+  res.render('xxx', { allSocks, allTshirt, allShort, layout: false })
+
+})
+
 router.get('/delete/:id', async (req, res) => {
   const { id } = req.params;
   await Order.destroy({ where: { id } })
