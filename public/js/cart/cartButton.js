@@ -1,45 +1,78 @@
-// кнопка в корзину
-const toCartButton = document.querySelector('.not_in_cart')
+let color, secondary_color, colorSocks, colorShorts;
 //форма выбора воротника
 const { colarType } = document.forms;
 // выбранный воротник 
-let selectedColar = 'r';
+let collar = 'r';
 colarType.addEventListener('change', (e) => {
-  selectedColar = e.target.value
-  console.log(selectedColar);
+  colar = e.target.value
 })
 // форма выбора рукава
 const { sleeveType } = document.forms;
 // выбранный рукав ?
-let selectedSleeve = 'short';
+let sleeve = 'short';
 sleeveType.addEventListener('change', (e) => {
-  selectedSleeve = e.target.value
+  sleeve = e.target.value
 })
-// див выбранного основного цвета
-const selectedPrimaryColorForm = document.querySelector('#primaryColor')
+// див выбранного основного цвета футболка
+const selectedPrimaryColorFormShirt = document.querySelector('#primaryColorShirt')
 // выбранный цвет в формате  rgb(152, 163, 162);
-const selectedPrimaryColor = selectedPrimaryColorForm.style.background;
-// див выбранного доп цвета
-const selectedSecondaryColorForm = document.querySelector('#secondaryColor')
+if (selectedPrimaryColorFormShirt) {
+
+   color = selectedPrimaryColorFormShirt.style.background;
+}
+// див выбранного доп цвета футболка
+const selectedSecondaryColorFormShirt = document.querySelector('#secondaryColorShirt')
 // выбранный доп цвет в формате rgb(152, 163, 162);
-const selectedSecondaryColor = selectedSecondaryColorForm.style.background ?? 'none'
+if (selectedSecondaryColorFormShirt) {
+   secondary_color = selectedSecondaryColorFormShirt.style.background;
+}
+
+//див выбранного основного цвета носки
+const selectedPrimaryColorFormSocks = document.querySelector('#primaryColorSocks')
+// выбранный цвет в формате  rgb(152, 163, 162);
+if (selectedPrimaryColorFormSocks) {
+   colorSocks = selectedPrimaryColorFormSocks.style.background;
+}
+
+// див выбранного основного цвета шорты
+const selectedPrimaryColorFormShorts = document.querySelector('#primaryColorShorts')
+// выбранный цвет в формате  rgb(152, 163, 162);
+if (selectedPrimaryColorFormShorts) {
+   colorShorts = selectedPrimaryColorFormShorts.style.background;
+}
 
 
 
-toCartButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  const usersItemDesignForTshirt = { selectedColar, selectedSleeve, selectedPrimaryColor, selectedSecondaryColor }
-  const usersItemDesignSocks = { selectedPrimaryColor }
-  const usersItemDesignShorts = { selectedPrimaryColor, selectedSecondaryColor }
+document.addEventListener('click', (e) => {
 
-  if (toCartButton.classList.contains('shirt_to_cart')) {
-    localStorage.setItem('in cart', JSON.stringify(usersItemDesignForTshirt))
-  }
-  if (toCartButton.classList.contains('socks_to_cart')) {
-    localStorage.setItem('in cart', JSON.stringify(usersItemDesignSocks))
-  }
-  if (toCartButton.classList.contains('shorts_to_cart')) {
-    localStorage.setItem('in cart', JSON.stringify(usersItemDesignShorts))
+  if (e.target.classList.contains('not_in_cart')) {
+    console.log(e.target);
+    e.preventDefault();
+    const usersItemDesignForTshirt = { collar, sleeve, color, secondary_color }
+    const usersItemDesignSocks = { colorSocks }
+    const usersItemDesignShorts = { colorShorts }
+
+    if (e.target.classList.contains('shirt_to_cart')) {
+      if (localStorage.getItem('tshirt')) {
+        localStorage.tshirt = JSON.stringify(usersItemDesignForTshirt)
+      } else {
+        localStorage.setItem('tshirt', JSON.stringify(usersItemDesignForTshirt))
+      }
+    }
+    if (e.target.classList.contains('socks_to_cart')) {
+      if (localStorage.getItem('socks')) {
+        localStorage.socks = usersItemDesignSocks;
+      } else {
+        localStorage.setItem('socks', JSON.stringify(usersItemDesignSocks))
+      }
+    }
+    if (e.target.classList.contains('shorts_to_cart')) {
+      if (localStorage.getItem('shorts')) {
+        localStorage.shorts = usersItemDesignShorts;
+      } else {
+        localStorage.setItem('shorts', JSON.stringify(usersItemDesignShorts))
+      }
+    }
   }
 })
 
