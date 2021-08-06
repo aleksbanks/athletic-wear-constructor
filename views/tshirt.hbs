@@ -66,6 +66,7 @@
         </g>
       </svg></div>
   </div>
+  
   <div class="item-info col-sm-7">
     <p class="h3 item-name" data-id="2" data-name="basic">basic</p>
     <p class="h3 item-price2"><span class="hidden-xs">Цена</span> <span data-id="2" data-price="1000">1000 руб.</span>
@@ -78,7 +79,7 @@
         role="button" aria-expanded="false" aria-controls="mobivars"><span aria-hidden="true">×</span></a>
       <div class="colors-block col-sm-5 education" data-toggle="tooltip" title="Выберите цвет">
         <div class="row"><span class="h4 col-sm-12">Выберите цвет</span></div><span class="blockColor"><span
-            class="selectedColor" data-style="fil0" title="Основной цвет" style="background: rgb(183, 70, 66);"></span>
+            class="selectedColor" id="primaryColor" data-style="fil0" title="Основной цвет" style="background: rgb(183, 70, 66);"></span>
           <div class="colors"><span class="color1"></span><span class="color2"></span><span class="color3"></span><span
               class="color4"></span><span class="color5"></span><span class="color6"></span><span
               class="color7"></span><span class="color8"></span><span class="color9"></span><span
@@ -87,7 +88,7 @@
               class="color16"></span><span class="color17"></span><span class="color18"></span><span
               class="color19"></span><span class="color20"></span><span class="color21"></span></div><span
             class="">Основной цвет</span>
-        </span><span class="blockColor"><span class="selectedColor" data-style="colorLine" title="Рукава и шея"
+        </span><span class="blockColor"><span class="selectedColor" id="secondaryColor" data-style="colorLine" title="Рукава и шея"
             style="background: rgb(255, 255, 255);"></span>
           <div class="colors"><span class="color1"></span><span class="color2"></span><span class="color3"></span><span
               class="color4"></span><span class="color5"></span><span class="color6"></span><span
@@ -106,7 +107,7 @@
         <div class="row">
           <div class="col-sm-6 neck">
             <span class="h6 education" data-toggle="tooltip" title="Выберите тип воротника">Воротник</span>
-            <form class="basic">
+            <form name="colarType" class="basic">
               <p><input class="radio" checked="" type="radio" id="normal" name="neck" value="r" data-id="2">
                 <label for="normal">Круглый</label>
               </p>
@@ -123,7 +124,7 @@
           </div>
           <div class="col-sm-6 sleeve">
             <span class="h6 education" data-toggle="tooltip" title="Выберите тип воротника">Рукав</span>
-            <form>
+            <form name="sleeveType">
               <p><input class="radio" checked="" type="radio" id="short" name="sleeve" value="short" data-id="2">
                 <label for="short">Короткий</label>
               </p>
@@ -136,6 +137,6 @@
       </div>
     </div>
   </div>
-  <button class="btn setlayout not_in_cart" id="nav-shorts-tab" data-toggle="tab" href="#shorts-tab" role="tab"
+  <button class="btn setlayout not_in_cart shirt_to_cart" id="nav-shorts-tab" data-toggle="tab" href="#shorts-tab" role="tab"
     aria-controls="nav-profile" aria-selected="false">В корзину</button>
 </div>
