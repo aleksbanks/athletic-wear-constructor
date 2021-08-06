@@ -16,6 +16,7 @@ const contactsRouter = require('./routes/contacts');
 const paymentRouter = require('./routes/payment');
 const checkoutRouter = require('./routes/contacts');
 const adminRouter = require('./routes/admin');
+const orderRouter = require('./routes/order')
 
 
 // Импортируем созданный в отдельный файлах рутеры.
@@ -60,6 +61,7 @@ app.use('/contacts', contactsRouter);
 app.use('/payment', paymentRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/admin', adminRouter);
+app.use('/order', orderRouter);
 
 app.get('/', (req, res) => {
   res.render('index');
