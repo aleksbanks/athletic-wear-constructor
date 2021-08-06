@@ -71,10 +71,11 @@ main .wrapper {
 .contacts {
   position: absolute;
   top: 0;
+  right: 0;
   padding-top: 15px;
   padding-right: 60px;
   display: flex;
-  width: 100%;
+  max-width: 30%;
   justify-content: flex-end;
   flex-direction: row;
   z-index: 99;

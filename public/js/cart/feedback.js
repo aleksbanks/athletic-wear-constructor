@@ -7,7 +7,7 @@ const comment = feedbackForm.comment.value;
 
 feedbackForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const orderItems = localStorage.getItem('localStorage.getItem')
+  const orderItems = localStorage.getItem('in_cart')
   const feedbackResponse = await fetch('путь', {
     method: "POST",
     headers: {
