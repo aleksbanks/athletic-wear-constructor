@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/admin.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script defer src="/js/admin_client.js"></script>
   <title>Admin page</title>
 </head>
 
@@ -25,24 +26,47 @@
 <div style="color: white">
   <span >Заказы</span>
   <div class="">
-    <table>
-    <tr>
+    <table class="tableLogo">
+    <tr >
     <th>Номер заказа</th>
-    <th>Сумма заказа</th>
-    <th>Лготип</th>
     <th>Дата заказа</th>
+    <th>ФИО заказчика</th>
+    <th>Номер телефона</th>
+    <th>Адрес эл.почты</th>
+    <th>Сумма заказа</th>
+    <th>Комментарий</th>
+    <th>Лготип</th>    
+    
    </tr>
    
     
     {{#each allOrders}}
-    <tr>
+    <tr name="row">
       <td>{{this.id}}</td>
-      <td>{{this.price}}</td>        
-      <td><img src="{{this.logo}}" alt="Logo"></td>
       <td>{{this.createdAt}}</td>
+      <td>{{name}}</td>
+      <td>{{phone}}</td>
+      <td>{{email}}</td>
+      <td>{{this.price}}</td>        
+      <td>{{comment}}</td>
+      <td><img class="logo" src="{{this.logo}}" alt="Logo"></td>
+      <td class="tbButton" id="tbButtonView{{this.id}}">Показать заказ</td>
+      {{!-- <td><button class="tbButton"id="tbButtonHide{{this.id}}">Скрыть заказ</button></td> --}}
+      <td class="tbButton"id="tbButtonDel{{this.id}}" name="tbButtonDel">Удалить заказ</td>
     </tr>  
     {{/each}}
     </table>
+    <div id="showOrderDiv">
+      <button id="showOrderButton">Press</button>
+      <ul>
+        {{#each showOrder}}
+          <li>
+
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+   
 </div>
 </div>
 
