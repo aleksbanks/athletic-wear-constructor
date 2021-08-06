@@ -46,7 +46,6 @@ if (selectedPrimaryColorFormShorts) {
 document.addEventListener('click', (e) => {
 
   if (e.target.classList.contains('not_in_cart')) {
-    console.log(e.target);
     e.preventDefault();
     const usersItemDesignForTshirt = { collar, sleeve, color, secondary_color }
     const usersItemDesignSocks = { colorSocks }
