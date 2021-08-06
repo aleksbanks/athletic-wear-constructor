@@ -298,13 +298,14 @@ main .type-toggle .type-icon i.fas {
 .item.item-shirt.active,
 .item.item-short.active,
 .item.item-gaiters.active {
+  max-height: 600px;
   width: 100%;
   float: right;
   /* height: 50vh; */
   padding-top: 15px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .wrap {
@@ -392,7 +393,7 @@ main .type-toggle .type-icon i.fas {
 .carousel-inner > .item.active .wrap:after {
   content: "";
   display: block;
-  background-image: url(/img/3d-short-r-shadow.png), url(/img/3d-short-r-shadow.png);
+  /* background-image: url(/img/3d-short-r-shadow.png), url(/img/3d-short-r-shadow.png); */
   position: absolute;
   top: 0px;
   left: 0;
@@ -409,9 +410,7 @@ main .type-toggle .type-icon i.fas {
   }
 }
 
-#shirts-tab .svg-img:after,
-#shirts-tab #thumbcarousel .thumb > div:after,
-.order-wrapper .layout-shirt .svg-img:after {
+.tshirt div div div:after {
   content: "";
   display: block;
   background-image: url(/img/shirt-3d-short-r-alt6.webp);
@@ -426,37 +425,22 @@ main .type-toggle .type-icon i.fas {
   background-repeat: no-repeat;
   background-position-x: center;
 }
-#shirts-tab .svg-img.short:after,
-.order-wrapper .layout-shirt .svg-img:after {
-  background-image: url(/img/shirt-3d-short-r.webp),
-    url(/img/shirt-3d-short-r.webp);
+
+.shorts:after {
+  content: "";
+  display: block;
+  background: url(/img/short-3d-alt.webp);
+  position: absolute;
   top: 0px;
+  left: 0;
   right: 0px;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
-#shirts-tab .svg-img.short.r:after,
-.order-wrapper .layout-shirt .svg-img.short.r:after {
-  background-image: url(/img/shirt-3d-short-r-alt6.webp);
-  top: 0px;
-  right: 0px;
-}
-#shirts-tab .svg-img.short.p:after,
-.order-wrapper .layout-shirt .svg-img.short.p:after {
-  background-image: url(/img/shirt-3d-short-p-alt.webp);
-  top: 0px;
-  right: 0px;
-}
-#shirts-tab .svg-img.short.v:after,
-.order-wrapper .layout-shirt .svg-img.short.v:after {
-  background-image: url(/img/shirt-3d-short-v-alt.webp);
-  top: 0px;
-  right: 0px;
-}
-#shirts-tab .svg-img.short.s:after,
-.order-wrapper .layout-shirt .svg-img.short.s:after {
-  background-image: url(/img/shirt-3d-short-s-alt.webp);
-  top: 0px;
-  right: 0px;
-}
+
 #shirts-tab .svg-img.long.r:after,
 .order-wrapper .layout-shirt .svg-img.long.r:after {
   background-image: url(/img/shirt-3d-long-r-alt.webp);
@@ -505,7 +489,7 @@ main .type-toggle .type-icon i.fas {
   position: relative;
 }
 
-#shorts-tab .svg-img:after,
+/* #shorts-tab .svg-img:after,
 #shorts-tab #thumbcarousel .thumb > div:after,
 .order-wrapper .layout-short .svg-img:after {
   content: "";
@@ -520,7 +504,7 @@ main .type-toggle .type-icon i.fas {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
-}
+} */
 #gaiters-tab .svg-img:after,
 #gaiters-tab #thumbcarousel .thumb > div:after,
 .order-wrapper .layout-gaiter .svg-img:after {
@@ -1219,6 +1203,7 @@ a.overall-del.clickable:hover {
   margin: 0 30px 30px;
 }
 .container {
+  align-self: center;
   margin-top: 50px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
