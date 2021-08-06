@@ -1,3 +1,4 @@
+
 body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -70,10 +71,11 @@ main .wrapper {
 .contacts {
   position: absolute;
   top: 0;
+  right: 0;
   padding-top: 15px;
   padding-right: 60px;
   display: flex;
-  width: 100%;
+  max-width: 30%;
   justify-content: flex-end;
   flex-direction: row;
   z-index: 99;
@@ -296,23 +298,19 @@ main .type-toggle .type-icon i.fas {
 .item.item-shirt.active,
 .item.item-short.active,
 .item.item-gaiters.active {
+  max-height: 600px;
   width: 100%;
   float: right;
   /* height: 50vh; */
   padding-top: 15px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .wrap {
   display: block;
 }
-/* @media only screen and (min-width: 768px) {
-  .wrap {
-    display: flex;
-  }
-} */
 .item-info {
   align-self: flex-start;
 }
@@ -390,12 +388,12 @@ main .type-toggle .type-icon i.fas {
 .carousel-inner .svg-img {
   width: 70%;
   position: relative;
-  margin: 0 auto;
+  margin: auto;
 }
-/* .carousel-inner > .item.active .wrap:after {
+.carousel-inner > .item.active .wrap:after {
   content: "";
   display: block;
-  background-image: url(../img/3d-short-r-shadow.png), url(../img/3d-short-r-shadow.png);
+  /* background-image: url(/img/3d-short-r-shadow.png), url(/img/3d-short-r-shadow.png); */
   position: absolute;
   top: 0px;
   left: 0;
@@ -405,21 +403,18 @@ main .type-toggle .type-icon i.fas {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
-} */
+}
 @media only screen and (min-width: 768px) {
   .carousel-inner .svg-img {
     margin: auto;
   }
 }
-/* .svg-img.basic, .svg-img.graphique {width: 70%;} */
-/* #shirts-tab .svg-img svg {display: block; width: 98.9%;} */
-#shirts-tab .svg-img:after,
-#shirts-tab #thumbcarousel .thumb > div:after,
-.order-wrapper .layout-shirt .svg-img:after {
+
+.tshirt div div div:after {
   content: "";
   display: block;
-  background-image: url(../img/shirt-3d-short-r-alt6.webp);
-  /* background-image: url(../img/shirt-3d-short-r.png), url(../img/shirt-3d-short-r.png); */
+  background-image: url(/img/shirt-3d-short-r-alt6.webp);
+  
   position: absolute;
   top: 0px;
   left: 0;
@@ -430,74 +425,52 @@ main .type-toggle .type-icon i.fas {
   background-repeat: no-repeat;
   background-position-x: center;
 }
-#shirts-tab .svg-img.short:after,
-.order-wrapper .layout-shirt .svg-img:after {
-  background-image: url(../img/shirt-3d-short-r.webp),
-    url(../img/shirt-3d-short-r.webp);
+
+.shorts:after {
+  content: "";
+  display: block;
+  background: url(/img/short-3d-alt.webp);
+  position: absolute;
   top: 0px;
+  left: 0;
   right: 0px;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
-#shirts-tab .svg-img.short.r:after,
-.order-wrapper .layout-shirt .svg-img.short.r:after {
-  background-image: url(../img/shirt-3d-short-r-alt6.webp);
-  /* background-image: url(../img/shirt-3d-short-r.png), url(../img/shirt-3d-short-r.png); */
-  top: 0px;
-  right: 0px;
-}
-#shirts-tab .svg-img.short.p:after,
-.order-wrapper .layout-shirt .svg-img.short.p:after {
-  background-image: url(../img/shirt-3d-short-p-alt.webp);
-  /* background-image: url(../img/shirt-3d-short-p.png), url(../img/shirt-3d-short-p.png); */
-  top: 0px;
-  right: 0px;
-}
-#shirts-tab .svg-img.short.v:after,
-.order-wrapper .layout-shirt .svg-img.short.v:after {
-  background-image: url(../img/shirt-3d-short-v-alt.webp);
-  /* background-image: url(../img/shirt-3d-short-v.png), url(../img/shirt-3d-short-v.png); */
-  top: 0px;
-  right: 0px;
-}
-#shirts-tab .svg-img.short.s:after,
-.order-wrapper .layout-shirt .svg-img.short.s:after {
-  background-image: url(../img/shirt-3d-short-s-alt.webp);
-  /* background-image: url(../img/shirt-3d-short-s.png), url(../img/shirt-3d-short-s.png); */
-  top: 0px;
-  right: 0px;
-}
+
 #shirts-tab .svg-img.long.r:after,
 .order-wrapper .layout-shirt .svg-img.long.r:after {
-  background-image: url(../img/shirt-3d-long-r-alt.webp);
-  /* background-image: url(../img/shirt-3d-long-r.png), url(../img/shirt-3d-long-r.png); */
+  background-image: url(/img/shirt-3d-long-r-alt.webp);
   top: 0px;
   right: 0px;
 }
 #shirts-tab .svg-img.long.p:after,
 .order-wrapper .layout-shirt .svg-img.long.p:after {
-  background-image: url(../img/shirt-3d-long-p-alt.webp),
-    url(../img/shirt-3d-long-p.webp);
+  background-image: url(/img/shirt-3d-long-p-alt.webp),
+    url(/img/shirt-3d-long-p.webp);
   top: 0px;
   right: 0px;
 }
 #shirts-tab .svg-img.long.v:after,
 .order-wrapper .layout-shirt .svg-img.long.v:after {
-  background-image: url(../img/shirt-3d-long-v-alt.webp);
-  /* background-image: url(../img/shirt-3d-long-v.png), url(../img/shirt-3d-long-v.png); */
+  background-image: url(/img/shirt-3d-long-v-alt.webp);
   top: 0px;
   right: 0px;
 }
 #shirts-tab .svg-img.long.s:after,
 .order-wrapper .layout-shirt .svg-img.long.s:after {
-  background-image: url(../img/shirt-3d-long-s-alt.webp),
-    url(../img/shirt-3d-long-s.webp);
+  background-image: url(/img/shirt-3d-long-s-alt.webp),
+    url(/img/shirt-3d-long-s.webp);
   top: 0px;
   right: 0px;
 }
 
-.svg-img:before,
-#thumbcarousel .thumb > div:before {
+.svg-img:before, #thumbcarousel .thumb > div:before {
   display: block;
-  background-image: url(../img/3d-shadow.png);
+  background-image: url(/img/3d-shadow.png);
   position: absolute;
   top: 1%;
   left: -1%;
@@ -516,12 +489,12 @@ main .type-toggle .type-icon i.fas {
   position: relative;
 }
 
-#shorts-tab .svg-img:after,
+/* #shorts-tab .svg-img:after,
 #shorts-tab #thumbcarousel .thumb > div:after,
 .order-wrapper .layout-short .svg-img:after {
   content: "";
   display: block;
-  background-image: url(../img/short-3d-alt.webp), url(../img/short-3d-alt.webp);
+  background-image: url(/img/short-3d-alt.webp), url(/img/short-3d-alt.webp);
   position: absolute;
   top: 0px;
   left: 0;
@@ -531,13 +504,13 @@ main .type-toggle .type-icon i.fas {
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
-}
+} */
 #gaiters-tab .svg-img:after,
 #gaiters-tab #thumbcarousel .thumb > div:after,
 .order-wrapper .layout-gaiter .svg-img:after {
   content: "";
   display: block;
-  background-image: url(../img/gaiters-3d.png), url(../img/gaiters-3d.png);
+  background-image: url(/img/gaiters-3d.png), url(/img/gaiters-3d.png);
   position: absolute;
   top: 0px;
   left: 0;
@@ -941,7 +914,7 @@ main .tab-content > .active {
 .layout .layout-gaiter {
   padding-top: 10%;
 }
-/* .layout .layout-shirt:hover .svg-img, .layout .layout-short:hover .svg-img, .layout .layout-gaiter:hover .svg-img{filter: blur(6px) grayscale(70%);; transition: 0.5s} */
+
 .layout .layout-gaiter svg {
   width: 100%;
 }
@@ -959,7 +932,7 @@ a.overall-del.clickable {
 a.overall-del.clickable:hover {
   color: #b50000;
 }
-/* .overall-del[data-type="shirt"] {background-image: url(../img/garbage.svg)} */
+
 .layout .layout-shirt:hover a.overall-del,
 .layout .layout-short:hover a.overall-del,
 .layout .layout-gaiter:hover a.overall-del {
@@ -1132,7 +1105,7 @@ a.overall-del.clickable:hover {
   border-width: 10px;
   margin-left: -10px;
 }
-.open.colors {
+.colors {
   display: inline-block;
 }
 .colors span {
@@ -1230,6 +1203,7 @@ a.overall-del.clickable:hover {
   margin: 0 30px 30px;
 }
 .container {
+  align-self: center;
   margin-top: 50px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
@@ -1322,7 +1296,7 @@ a.overall-del.clickable:hover {
   opacity: 1;
 }
 .radio:focus + label:before {
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
+  box-shadow: 0 0 0 3px rgba(255,255,0,.7);
 }
 
 @media only screen and (min-width: 480px) {
@@ -1427,4 +1401,71 @@ a.overall-del.clickable:hover {
   .modal-xl {
     max-width: 1000px;
   }
+}
+
+.test::after{
+  background-image: url(/img/shirt-3d-short-r-alt6.webp);
+  top:0px;
+  right: 0px;
+
+  content: "";
+  display: block;
+  background-image: url(/img/shirt-3d-short-r-alt6.webp);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0px;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+.tshirt-colorized:after{
+  background-image: url(/img/shirt-3d-short-p-alt.webp);
+  top:0px;
+  right: 0px;
+
+  content: "";
+  display: block;
+  background-image: url(/img/shirt-3d-short-r-alt6.webp);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0px;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.short1:after {
+  content: "";
+    display: block;
+    background-image: url(/img/short-3d-alt.webp), url(/img/short-3d-alt.webp);
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.socks-colorized:after {
+  content: "";
+  display: block;
+  background-image: url(/img/gaiters-3d.png), url(/img/gaiters-3d.png);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0px;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }

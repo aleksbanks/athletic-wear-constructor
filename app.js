@@ -16,6 +16,7 @@ const contactsRouter = require('./routes/contacts');
 const paymentRouter = require('./routes/payment');
 const checkoutRouter = require('./routes/contacts');
 const adminRouter = require('./routes/admin');
+const orderRouter = require('./routes/order')
 
 
 // Импортируем созданный в отдельный файлах рутеры.
@@ -60,10 +61,10 @@ app.use('/contacts', contactsRouter);
 app.use('/payment', paymentRouter);
 app.use('/checkout', checkoutRouter);
 app.use('/admin', adminRouter);
+app.use('/order', orderRouter);
 
 app.get('/', (req, res) => {
-  const tshirt = {};
-  res.render('index', { tshirt });
+  res.render('index');
 });
 
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос. Это значит, что искомого раздела просто нет на сайте. Для таких ситуаций используется код ошибки 404. Создаём небольшое middleware, которое генерирует соответствующую ошибку.

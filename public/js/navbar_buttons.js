@@ -4,7 +4,7 @@ shortsButton.addEventListener('click', async (e) => {
   e.preventDefault();
   const response = await fetch('/shorts')
   const result = await response.text();
-  const shortsPage = document.querySelector('.item');
+  const shortsPage = document.querySelector('.container');
   shortsPage.innerHTML = result;
 })
 
@@ -14,7 +14,7 @@ shirtButton.addEventListener('click', async (e) => {
   e.preventDefault();
   const response = await fetch('/tshirts')
   const result = await response.text();
-  const shortsPage = document.querySelector('.item');
+  const shortsPage = document.querySelector('.container');
   shortsPage.innerHTML = result;
 })
 
@@ -24,7 +24,7 @@ socksButton.addEventListener('click', async (e) => {
   e.preventDefault();
   const response = await fetch('/socks')
   const result = await response.text();
-  const shortsPage = document.querySelector('.item');
+  const shortsPage = document.querySelector('.container');
   shortsPage.innerHTML = result;
 })
 
@@ -34,6 +34,6 @@ cartButton.addEventListener('click', async (e) => {
   e.preventDefault();
   const response = await fetch('/cart')
   const result = await response.text();
-  const shortsPage = document.querySelector('.item');
+  const shortsPage = document.querySelector('.container');
   shortsPage.innerHTML = result;
 })
