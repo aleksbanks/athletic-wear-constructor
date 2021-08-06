@@ -1,8 +1,7 @@
-const addPlayerForm = document.querySelector('#addPlayer');
 const modalWindow = document.querySelector('.players')
 
 // adding new player
-addPlayerForm.addEventListener('click', (e) => {
+modalWindow.addEventListener('click', (e) => {
   if (e.target.classList.contains('add')) {
     e.preventDefault();
     const newPlayer = document.createElement('div')
@@ -12,7 +11,7 @@ addPlayerForm.addEventListener('click', (e) => {
 })
 
 // deleting player
-addPlayerForm.addEventListener('click', (e) => {
+modalWindow.addEventListener('click', (e) => {
   if (e.target.classList.contains('del')) {
     e.preventDefault();
     const postParent = e.target.closest('.rowPlayer')
@@ -21,8 +20,12 @@ addPlayerForm.addEventListener('click', (e) => {
 
 })
 
+// на кнопку продолжить
+const allItems = JSON.parse(localStorage.getItem('in_cart'))
+
 const playerTemplate = `<div class="rowPlayer d-flex flex-column align-items-center"><span class="numb"></span> 
           <p>
+          
             <input class="form-control" style="width: 50px; display: inline-block;" type="text" name="number" placeholder="№">
             <input class="form-control" style="width: 250px; display: inline-block;" type="text" name="namePlayer" placeholder="Фамилия/надпись">
             <select name="size" required="" class="form-control" style="width: 110px; display: inline-block;">
@@ -51,6 +54,6 @@ const playerTemplate = `<div class="rowPlayer d-flex flex-column align-items-cen
             <label><input type="checkbox" name="gaiter" data-price="0"> Гетры</label>
             <!-- <label class="hidden"><input class="partner" type="checkbox" name="goalstream" data-price="0" /> Goalstream</label> -->
           </div>
-          <p><button class="add btn btn btn-green btn-xl" style="outline: none;">Добавить игрока</button></p>
+          <p><button class="add btn btn btn-green btn-xl addPlayer" style="outline: none;">Добавить игрока</button></p>
         <span class="del">Удалить</span></div>
 `

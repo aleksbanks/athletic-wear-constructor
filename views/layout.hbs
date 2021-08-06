@@ -8,10 +8,9 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/css/animate.min.css">
-  <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-  <script defer src="https://unpkg.com/@popperjs/core@2"></script>
-  <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  {{!--
+  <script defer src="https://unpkg.com/@popperjs/core@2"></script> --}}
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -24,6 +23,7 @@
   <script defer src="/js/cart/cartButton.js"></script>
   <script defer src="/js/cart/feedback.js"></script>
   <script defer src="/js/cart/addPlayerButton.js"></script>
+
   <title>Athletic Wear Constructor</title>
 </head>
 
@@ -1650,13 +1650,9 @@
               <label style="width: 300px; text-align: left; cursor: pointer;"><input type="checkbox" name="printNumber"
                   data-price="200" data-price2="200"> Нанесение номера на спине <sup>+200 руб.</sup></label>
               <br><br>
-
-              <label><input type="checkbox" name="shirt" checked="checked" data-price="0"> Футболка</label>
-              <label><input type="checkbox" name="short" data-price="0"> Шорты</label>
-              <label><input type="checkbox" name="gaiter" data-price="0"> Гетры</label>
               <!-- <label class="hidden"><input class="partner" type="checkbox" name="goalstream" data-price="0" /> Goalstream</label> -->
             </div>
-            <p><button class="add btn btn btn-green btn-xl " id="addPlayer" style="outline: none;">Добавить
+            <p><button class="add btn btn btn-green btn-xl addPlayer" style="outline: none;">Добавить
                 игрока</button></p>
           </div>
         </div>
@@ -1685,8 +1681,8 @@
                   data-im-insert="true"></p>
               <p><input type="email" class="form-control" name="email" placeholder="Электронная почта" required=""></p>
               <p><textarea class="form-control" name="comment" placeholder="Комментарий к заказу"></textarea></p>
-              <a id="sendOrder" class="btn-send btn btn-green d-flex m-auto" data-toggle="tooltip" data-placement="top"
-                title="Введите Ваше Имя, Телефон и E-mail">Отправить заказ</a>
+              <button id="sendOrder" class="btn-send btn btn-green d-flex m-auto" data-toggle="tooltip"
+                data-placement="top" title="Введите Ваше Имя, Телефон и E-mail">Отправить заказ</button>
               <p class="small text-center">Нажимая кнопку "отправить заказ", Вы даете <a data-toggle="modal"
                   data-target="#soglasie">согласие на обработку персональных данных</a></p>
             </form>
@@ -1695,8 +1691,11 @@
       </div>
     </div>
   </div>
-
-
+  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title"
+    data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  <script defer>$(function () {
+      $('[data-toggle="popover"]').popover()
+    })</script>
 
 </body>
 
