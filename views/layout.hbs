@@ -23,6 +23,7 @@
   <script defer src="/js/cart/cartButton.js"></script>
   <script defer src="/js/cart/feedback.js"></script>
   <script defer src="/js/cart/addPlayerButton.js"></script>
+  <script defer src="/js/cart/colorButtons.js"></script>
 
   <title>Athletic Wear Constructor</title>
 </head>
@@ -45,23 +46,23 @@
   </div>
   <div class="container">
 
-  
-      
-        {{{body}}}
-      
 
-    </div>
+
+    {{{body}}}
+
+
+  </div>
 
   </div>
   <br>
   <br>
-  
-        <!-- controls -->
-        <a class="left carousel-control carousel-control-prev" href="#thumbcarousel" role="button" data-slide="prev"> <i
-            class="fas fa-angle-left"></i> </a> <a class="right carousel-control carousel-control-next"
-          href="#thumbcarousel" role="button" data-slide="next"><i class="fas fa-angle-right"></i> </a>
-      </div>
-    </div>
+
+  <!-- controls -->
+  <a class="left carousel-control carousel-control-prev" href="#thumbcarousel" role="button" data-slide="prev"> <i
+      class="fas fa-angle-left"></i> </a> <a class="right carousel-control carousel-control-next" href="#thumbcarousel"
+    role="button" data-slide="next"><i class="fas fa-angle-right"></i> </a>
+  </div>
+  </div>
   </div>
   {{!-- модальные окна --}}
   {{!-- contacts --}}
@@ -202,8 +203,8 @@
             <p>
               <input name="number" class="form-control number" style="width: 50px; display: inline-block;" type="text"
                 name="number" placeholder="№">
-              <input name="lastName" class="form-control lastName" style="width: 250px; display: inline-block;" type="text"
-                name="namePlayer" placeholder="Фамилия/надпись">
+              <input name="lastName" class="form-control lastName" style="width: 250px; display: inline-block;"
+                type="text" name="namePlayer" placeholder="Фамилия/надпись">
               <select name="size" required="" class="form-control size" style="width: 110px; display: inline-block;">
                 <option selected="" disabled="">Размер</option>
                 <option value="YS">YXS (86-104)</option>
@@ -265,7 +266,16 @@
 </body>
 
 <script defer>$(function () {
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover({
+      template: `<div class="popover" role="tooltip"><div class="colors"><span class="color1"></span><span class="color2"></span><span
+                class="color3"></span><span class="color4"></span><span class="color5"></span><span
+                class="color6"></span><span class="color7"></span><span class="color8"></span><span
+                class="color9"></span><span class="color10"></span><span class="color11"></span><span
+                class="color12"></span><span class="color13"></span><span class="color14"></span><span
+                class="color15"></span><span class="color16"></span><span class="color17"></span><span
+                class="color18"></span><span class="color19"></span><span class="color20"></span><span
+                class="color21"></span></div></div>`
+    })
   })
 </script>
 

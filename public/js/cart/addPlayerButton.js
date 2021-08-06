@@ -56,17 +56,20 @@ document.addEventListener('click', (e) => {
     let arrayOfPlayers = []
     e.preventDefault();
     const playerInfo = document.querySelectorAll('.rowPlayer');
-    const logo = playerInfo[0].querySelector(".logo").value
-    arrayOfPlayers.push(logo)
     console.log(playerInfo);
-    for (let i = 0; playerInfo.length; i++) {
+    const logo = playerInfo[0].querySelector(".logo").value
+    arrayOfPlayers.push({ logo })
+    for (let i = 0; i < playerInfo.length; i++) {
       console.log(playerInfo.item(i));
-      const number = playerInfo.item(i).querySelector(".number").value;
-      const lastName = playerInfo.item(i).querySelector(".lastName").value;
-      const size = playerInfo.item(i).querySelector(".size").value;
+      const number = playerInfo.item(i).querySelector('.number');
+      const lastName = playerInfo.item(i).querySelector(".lastName");
+      const size = playerInfo.item(i).querySelector(".size");
       arrayOfPlayers.push({ number, lastName, size })
     }
-    localStorage.setItem('order', arrayOfPlayers)
+    if (localStorage.getItem('order')) {
+      localStorage.order = JSON.stringify(arrayOfPlayers);
+    } else {
+    localStorage.setItem('order', JSON.stringify(arrayOfPlayers))}
   }
 
 })

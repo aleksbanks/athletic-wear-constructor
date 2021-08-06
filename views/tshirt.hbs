@@ -81,27 +81,14 @@
       <div class="vars row"><a type="button" class="close" aria-label="Close" data-toggle="collapse" href="#mobivars"
           role="button" aria-expanded="false" aria-controls="mobivars"><span aria-hidden="true">×</span></a>
         <div class="colors-block col-sm-5 education" data-toggle="tooltip" title="Выберите цвет">
-          <div class="row"><span class="h4 col-sm-12">Выберите цвет</span></div><span class="blockColor"><span
-              class="selectedColor" id="primaryColorShirt" data-style="fil0" title="Основной цвет"
-              style="background: rgb(183, 70, 66);"></span>
-            <div class="colors"><span class="color1"></span><span class="color2"></span><span
-                class="color3"></span><span class="color4"></span><span class="color5"></span><span
-                class="color6"></span><span class="color7"></span><span class="color8"></span><span
-                class="color9"></span><span class="color10"></span><span class="color11"></span><span
-                class="color12"></span><span class="color13"></span><span class="color14"></span><span
-                class="color15"></span><span class="color16"></span><span class="color17"></span><span
-                class="color18"></span><span class="color19"></span><span class="color20"></span><span
-                class="color21"></span></div><span class="">Основной цвет</span>
-          </span><span class="blockColor"><span class="selectedColor" id="secondaryColorShirt" data-style="colorLine"
-              title="Рукава и шея" style="background: rgb(255, 255, 255);"></span>
-            <div class="colors"><span class="color1"></span><span class="color2"></span><span
-                class="color3"></span><span class="color4"></span><span class="color5"></span><span
-                class="color6"></span><span class="color7"></span><span class="color8"></span><span
-                class="color9"></span><span class="color10"></span><span class="color11"></span><span
-                class="color12"></span><span class="color13"></span><span class="color14"></span><span
-                class="color15"></span><span class="color16"></span><span class="color17"></span><span
-                class="color18"></span><span class="color19"></span><span class="color20"></span><span
-                class="color21"></span></div><span class="">Рукава и воротник</span>
+          <div class="row"><span class="h4 col-sm-12">Выберите цвет</span></div><span class="blockColor">
+
+            <a tabindex="0" role="button" data-toggle="popover" title="Dismissible popover" data-content=""><span
+                class="selectedColor color1" id="primaryColor" data-style="fil0" title="Основной цвет"></span> </a>
+            <span class="">Основной цвет</span>
+          </span><span class="blockColor"><span class="selectedColor" id="secondaryColor" data-style="colorLine"
+              title="Рукава и шея"></span>
+            <span class="">Рукава и воротник</span>
           </span>
         </div>
         <div class="options-block col-sm-7">
@@ -144,7 +131,6 @@
     <button class="btn setlayout not_in_cart shirt_to_cart" id="" href="#shorts-tab">В корзину</button>
   </div>
 </div>
-
 <div class="d-flex justify-content-center" style="margin-top: 100px">
   <div id="thumbcarousel" class="carousel slide" data-interval="false" data-ride="carousel">
     <div class="carousel-inner">
@@ -384,7 +370,7 @@
                 </g>
               </svg></div>
           </div>
-{{!-- 
+          {{!--
           <div data-target="#carousel-shirt" data-slide-to="3" class="thumb col-sm-1 col-3">
             <div class="corner"><svg id="front_shirt_corner" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 550.3"
@@ -1567,5 +1553,4 @@
       </div>
     </div>
   </div>
-  <button class="btn setlayout not_in_cart shirt_to_cart" href="#shorts-tab">В корзину</button>
 </div>
