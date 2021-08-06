@@ -21,13 +21,9 @@
     crossorigin="anonymous"></script>
   <script defer src="/js/navbar_buttons.js"></script>
   <script defer src="/js/colorButtons.js"></script>
-  <script defer src="/js/cartButton.js"></script>
-  <script defer src="/js/feedback.js"></script>
-  {{!--
-  <link rel="stylesheet" href="/css/all.css">
-  <link rel="stylesheet" href="/css/typeahead.css">
-  <link rel="stylesheet" href="/css/bootstrap.min-calc.css">
-  <link rel="stylesheet" href="/css/custom-calc.css"> --}}
+  <script defer src="/js/cart/cartButton.js"></script>
+  <script defer src="/js/cart/feedback.js"></script>
+  <script defer src="/js/cart/addPlayerButton.js"></script>
   <title>Athletic Wear Constructor</title>
 </head>
 
@@ -1615,6 +1611,7 @@
       </div>
     </div>
   </div>
+
   {{!-- players --}}
   <div class="modal fade" id="addPlayers" tabindex="-1" role="dialog" aria-labelledby="addPlayers" style="display:none"
     aria-hidden="true">
@@ -1628,10 +1625,6 @@
                 placeholder="№">
               <input class="form-control" style="width: 250px; display: inline-block;" type="text" name="namePlayer"
                 placeholder="Фамилия/надпись">
-              <select name="rukav" class="form-control" style="width: 170px; display: inline-block;">
-                <option value="1" selected="">Короткий рукав</option>
-                <option value="2">Длинный рукав</option>
-              </select>
               <select name="size" required="" class="form-control" style="width: 110px; display: inline-block;">
                 <option selected="" disabled="">Размер</option>
                 <option value="YS">YXS (86-104)</option>
@@ -1647,6 +1640,8 @@
                 <option value="XXL">XXL (56-58)</option>
                 <option value="XXXL">XXXL (60-62)</option>
               </select>
+              <input class="form-control" style="display: width: 400px inline-block;" type="text" name="teamLogo"
+                placeholder="Cсылка на ваше лого">
             </p>
 
             <div style="padding: 0 20px 10px;">
@@ -1661,10 +1656,11 @@
               <label><input type="checkbox" name="gaiter" data-price="0"> Гетры</label>
               <!-- <label class="hidden"><input class="partner" type="checkbox" name="goalstream" data-price="0" /> Goalstream</label> -->
             </div>
-            <p><button class="add btn btn btn-green btn-xl" style="outline: none;">Добавить игрока</button></p>
+            <p><button class="add btn btn btn-green btn-xl " id="addPlayer" style="outline: none;">Добавить
+                игрока</button></p>
           </div>
         </div>
-        <div class="">
+        <div>
           <p>
             <button type="button" class="btn btn-secondary closeplayers float-right"
               data-dismiss="modal">Продолжить</button>
@@ -1683,7 +1679,8 @@
           <span class="h5">Как с вами связаться?</span>
           <div class="col-sm-8">
             <form class="d-flex flex-column" name="feedbackForm">
-              <p><input type="text" class="form-control" name="name" placeholder="Имя" required=""></p>
+              <p><input type="text" class="form-control" name="name" placeholder="Имя" required=""
+                  data-im-insert="true"></p>
               <p><input type="text" class="form-control" name="phone" placeholder="Контактный телефон" required=""
                   data-im-insert="true"></p>
               <p><input type="email" class="form-control" name="email" placeholder="Электронная почта" required=""></p>
